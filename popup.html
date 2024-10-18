@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facebook Photo Downloader</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+    #progress-container {
+      margin-top: 10px;
+    }
+    #progress-bar {
+      width: 100%;
+      height: 20px;
+    }
+    #control-buttons {
+      margin-top: 10px;
+    }
+    button {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Facebook Photo Downloader</h2>
+  <p>Click the "Download All Photos" button on the Facebook page to start downloading.</p>
+  <div id="progress-container">
+    <progress id="progress-bar" value="0" max="100"></progress>
+    <p id="progress-text">0 / 0 photos downloaded</p>
+  </div>
+  <div id="control-buttons">
+    <button id="pause-button">Pause</button>
+    <button id="resume-button" disabled>Resume</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

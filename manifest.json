@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Facebook Photo Batch Downloader",
+  "version": "1.0",
+  "description": "Batch download Facebook photos in the largest available size",
+  "permissions": ["activeTab", "downloads", "scripting"],
+  "host_permissions": ["https://www.facebook.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
